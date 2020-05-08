@@ -12,9 +12,9 @@ class DefaultConfigs(object):
     split_online = False  # split dataset to train and val online or offline
 
     # set changeable configs, you can change one during your experiment
-    dataset = "/data/zcj/webank/classification/dataset/df/cloud/data/dataset/"  # dataset folder with train and val
-    test_folder =  "/data/zcj/webank/classification/dataset/df/cloud/data/test/"      # test images' folder
-    submit_example =  "/data/zcj/webank/classification/dataset/df/cloud/data/submit_example.csv"    # submit example file
+    dataset = "/dataset/df/cloud/data/dataset/"  # dataset folder with train and val
+    test_folder =  "/dataset/df/cloud/data/test/"      # test images' folder
+    submit_example =  "/dataset/df/cloud/data/submit_example.csv"    # submit example file
     checkpoints = "./checkpoints/"        # path to save checkpoints
     log_dir = "./logs/"                   # path to save log files
     submits = "./submits/"                # path to save submission files
