@@ -26,6 +26,15 @@
 ### 使用方法
 更改`config.py`中的参数，训练执行 `python main.py`，预测执行`python test.py`
 
+### submit_example.csv 
+每一行：filename,label
+样例：
+```
+0001.jpg,dog
+0002.jpg,dog
+0003.jpg,dog
+```
+注：预测图像可能没有label，所以label可以随意给个临时的，但一些比赛平台对都会给个提交样例，随意给个label
 ### TODO
 
 - [ ] 优化模型融合策略
