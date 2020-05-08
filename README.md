@@ -1,15 +1,15 @@
 ### pytorch 图像分类竞赛框架
 
-### 更新日志
+### 1. 更新日志
 - (2020年5月2日) 基础版本上线
 
-### 依赖库
+### 2. 依赖库
 - pretrainedmodels
 - progress
 - efficientnet-pytorch
 - apex
 
-### 支持功能
+### 3. 支持功能
 
 - [x] pytorch官网模型
 - [x] [pretrained-models.pytorch](https://github.com/Cadene/pretrained-models.pytorch) 复现的部分模型
@@ -23,10 +23,10 @@
 - [x] Focal Loss
 - [ ] AotuAgument
   
-### 使用方法
+### 4. 使用方法
 更改`config.py`中的参数，训练执行 `python main.py`，预测执行`python test.py`
 
-### submit_example.csv 
+### 5. submit_example.csv 
 每一行：filename,label
 样例：
 ```
@@ -35,7 +35,7 @@
 0003.jpg,dog
 ```
 注：预测图像可能没有label，所以label可以随意给个临时的，但一些比赛平台对都会给个提交样例，随意给个label
-### TODO
+### 6.TODO
 
 - [ ] 优化模型融合策略
 - [ ] 优化online数据增强
