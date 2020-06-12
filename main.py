@@ -12,6 +12,7 @@ import torchvision.transforms as transforms
 import torchvision.datasets as datasets
 import numpy as np
 from PIL import ImageFile
+from config import configs
 from models.model import get_model
 from sklearn.model_selection import train_test_split
 from utils.misc import *
