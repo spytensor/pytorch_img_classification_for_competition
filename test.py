@@ -111,7 +111,6 @@ with torch.no_grad():
         for inputs, labels in tqdm(test_loader):
             inputs = inputs.cuda()
             outputs = model(inputs)
-            outputs = outputs[:, :45]
             outputs = torch.nn.functional.softmax(outputs, dim=1)
             # print(outputs.shape)
             y_pred_prob = torch.cat([y_pred_prob, outputs.to("cpu")], dim=0)
@@ -119,6 +118,6 @@ with torch.no_grad():
     y_pred_prob = y_pred_prob.reshape((len(aug), len_data, configs.num_classes))
     y_pred_prob = torch.sum(y_pred_prob, 0) / (len(aug) * 1.0)
     _, predicted_all = torch.max(y_pred_prob, 1)
-    predicted = predicted_all + 1
+    predicted = predicted_all + 1  # If the category starts with 1 ,else delet 1
     test_files.type = predicted.data.cpu().numpy().tolist()
     test_files.to_csv('./submits/%s_baseline.csv' % configs.model_name, index=False)
